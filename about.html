@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pixelify+Sans:wght@400..700&family=Plaster&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/about.css">
+    <title>About Me</title>
+</head>
+<body>
+    <div class="title">
+        <font color="#40BFC1">S</font><font color="#F0134D">O</font><font color="#FF6F5E">M</font><font color="#40BFC1">E</font><font color="#F0134D">T</font><font color="#FF6F5E">H</font><font color="#40BFC1">I</font><font color="#F0134D">N</font><font color="#FF6F5E">G</font>
+        <font color="#F0134D">A</font><font color="#FF6F5E">B</font><font color="#40BFC1">O</font><font color="#F0134D">U</font><font color="#FF6F5E">T</font>
+        <br>
+        <font color="#40BFC1">M</font><font color="#F0134D">E</font>
+    </div>
+
+    <div class="intro">
+        An IT professional with a background in web content development, digital marketing, and customer support.
+        Currently a Project International Mobility Systems Advisor at Shell, displaying leadership and operational
+        skills, and eager to contribute in a well-driven company that can assist me develop my knowledge and talents.
+    </div>
+
+    <div class="resume-container">
+        <a href="/documents/CHELSIA MARIE C. BAÑEZ_CV.pdf">
+            <div class="resume">Download Resume</div>
+        </a>
+    </div>    
+    
+    <div class="button-container">
+      <button class="open-softSkills" onclick="openSoftSkills()">Soft Skills</button>
+      <button class="open-techSkills" onclick="openTechSkills()">Technical Skills</button>
+    </div>
+  
+    <div class="form-popup" id="mySoftSkills">
+        <form action="/action_page.php" class="form-containerSoft">
+            <h1>SOFT SKILLS</h1>
+              <div class="inventory-grid">
+                  <div class="slot">Time Management</div>
+                  <div class="slot">Multi-tasking</div>
+                  <div class="slot">Teamwork</div>
+                  <div class="slot">Willingness to Learn</div>
+                  <div class="slot">Adaptability</div>
+                  <div class="slot">Communication</div>
+              </div>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    
+    
+    <div class="form-popup1" id="myTechSkills">
+        <form action="/action_page.php" class="form-containerTech">
+            <h1>TECHNICAL SKILLS</h1>
+            <div class="inventory-grid">
+                <div class="slot">
+                    <p class="category-title">Web Development</p>
+                    <ul class="skills-list">
+                        <li>HTML/CSS</li>
+                        <li>MySQL/MongoDB</li>
+                        <li>Java</li>
+                        <li>WordPress/Shopify</li>
+                    </ul>
+                </div>
+                <div class="slot">
+                    <p class="category-title">Microsoft Office</p>
+                    <ul class="skills-list">
+                        <li>Excel</li>
+                        <li>Word</li>
+                        <li>PowerPoint</li>
+                        <li>Access</li>
+                    </ul>
+                </div>
+                <div class="slot">
+                    <p class="category-title">Design Software Tools</p>
+                    <ul class="skills-list">
+                        <li>Figma</li>
+                        <li>Canva</li>
+                    </ul>
+                </div>
+                <div class="slot">
+                    <p class="category-title">CRM</p>
+                    <ul class="skills-list">
+                        <li>Salesforce</li>
+                        <li>SAP</li>
+                    </ul>
+                </div>
+                <div class="slot">
+                    <p class="category-title">Global Mobility Technology</p>
+                    <ul class="skills-list">
+                        <li>AssignmentPro</li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn cancel" onclick="closeTech()">Close</button>
+        </form>
+    </div>
+  
+    <div class="button-controls">
+      <a href="index.html" class="controller-button">M
+          <span class="tooltip">Start Page</span>
+      </a>
+      <a href="contact.html" class="controller-button">C
+          <span class="tooltip">Contact</span>
+      </a>
+      <a href="portfolio.html" class="controller-button">B
+          <span class="tooltip">Portfolio</span>
+      </a>
+      <a href="experience.html" class="controller-button">C
+          <span class="tooltip">Work Experience</span>
+    </div>  
+        
+    <script src="softSkills.js"></script>
+    <script src="techSkills.js"></script>
+</body>
+</html>

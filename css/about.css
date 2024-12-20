@@ -1,0 +1,349 @@
+*{
+    background-color: #F5F0E3;
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    text-decoration: none;
+    outline: none;
+}
+h1{
+  background-color: white;
+}
+
+/* TITLE */
+.title{
+    font-family: "Plaster", system-ui;
+    font-size: 75px;
+    margin-top: 5%;
+    text-align: center;
+}
+/* intro */
+.intro{
+    font-family: "Josefin Sans", serif;
+    font-size: 15px;
+    margin: 2%;
+    text-align: center;
+}
+
+/* Container to center the resume button */
+.resume-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Resume button styles */
+.resume {
+  font-size: 15px;
+  color: white;
+  height: auto;
+  margin: 10px;
+  padding: 10px 20px; /* Adjust padding for better size */
+  font-family: "Pixelify Sans", sans-serif;
+  text-transform: uppercase;
+  background: black;
+  text-align: center;
+  display: flex; /* Center text within the button */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Button active state */
+.resume:active {
+  top: 2px;
+}
+
+/* Styling for layered effect */
+.resume::before, .resume::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: black;
+  z-index: -1;
+}
+
+.resume::before {
+  top: 8px; /* Adjusted to avoid too much offset */
+  bottom: 8px;
+  left: -8px;
+  right: -8px;
+}
+
+.resume::after {
+  top: 4px; /* Reduced spacing for alignment */
+  bottom: 4px;
+  left: -4px;
+  right: -4px;
+}
+
+
+/* POP UP SKILLS */
+/* Button used to open the contact form - fixed at the bottom of the page */
+/* Container to hold buttons side by side */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center aligns buttons within the container */
+  gap: 20px; /* Adds space between the buttons */
+  margin-top: 10px;
+}
+
+/* BUTTON styles */
+.open-softSkills, .open-techSkills {
+  border: none;
+  background: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 15px;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 2; /* Ensure button text is above pseudo-elements */
+}
+
+/* Shared styles for the before and after pseudo-elements for both buttons */
+.open-softSkills::before, .open-techSkills::before,
+.open-softSkills::after, .open-techSkills::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: white;
+  z-index: -1; /* Place pseudo-elements below the button text */
+}
+
+.open-softSkills::before, .open-techSkills::before {
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+}
+
+.open-softSkills::after, .open-techSkills::after {
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+}
+
+/* Inventory Grid Layout - applies to both Soft and Technical Skills */
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjusts to three columns */
+  gap: 10px; /* Space between slots */
+  margin: 20px 0;
+}
+
+/* Slot Style for individual items */
+.slot {
+  background-color: #f1f1f1;
+  border: 2px solid #7b7b7b;
+  padding: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; /* Optional: Round corners */
+}
+
+/* Category Title (acts as inventory label, e.g., for "Soft Skills" or "Technical Skills") */
+.category-title {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Skills List (for nested skill items within each slot, if used) */
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.skills-list li {
+  font-size: 14px;
+  margin: 4px 0;
+  padding: 2px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Popup Container (shared across forms) */
+.form-popup, .form-popup1 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #7b7b7b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  background-color: #e0e0e0;
+  padding: 20px;
+  overflow: auto;
+}
+.form-popup, .form-popup1 h1{
+  background-color: #e0e0e0;
+  font-family: "Josefin Sans", serif;
+}
+
+/* Form Container (common style, customized per specific form if needed) */
+.form-containerSoft, .form-containerTech {
+  text-align: center;
+  background-color: #e0e0e0;
+}
+
+/* Button Styling (shared cancel button style) */
+.btn.cancel {
+  background-color: #d9534f;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn.cancel:hover {
+  opacity: 0.8;
+}
+
+
+/* -------------------- */
+/* CONTROLS */
+/* ------------------- */
+.button-controls {
+  font-family: "Josefin Sans", serif;
+  position: fixed; /* Keep the buttons fixed in the corner */
+  bottom: 50px; /* Space from the bottom */
+  right: 120px; /* Set space from the right */
+  width: 90px; /* Define a width for the button controls */
+  height: 90px;
+}
+
+.controller-button {
+  width: 40px; /* Set width of the buttons */
+  height: 40px; /* Set height of the buttons */
+  border-radius: 50%; /* Keep circular shape */
+  display: flex; /* Flexbox to center text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: none; /* Remove shadow */
+  transition: background-color 0.3s, transform 0.1s; /* Smooth transitions */
+}
+
+/* Positioning for diamond shape */
+.controller-button:nth-child(1) {
+  background-color: #36AE7C; /* Green */
+  position: absolute;
+  top: -10%; 
+  left: 50%; 
+  transform: translate(-50%, 0);
+}
+
+.controller-button:nth-child(2) {
+  background-color: #F9D923; /* Yellow */
+  position: absolute;
+  top: 50%; 
+  right: -10%; 
+  transform: translate(0, -50%);
+}
+
+.controller-button:nth-child(3) {
+  background-color: #F0134D; /* Red */
+  position: absolute;
+  bottom: -10%; 
+  left: 50%; 
+  transform: translate(-50%, 0);
+}
+
+.controller-button:nth-child(4) {
+  background-color: #40BFC1; /* Blue */
+  position: absolute;
+  top: 50%; 
+  left: -10%; 
+  transform: translate(0, -50%);
+}
+
+.tooltip {
+  visibility: hidden; /* Hide the tooltip by default */
+  width: 120px; /* Width of the tooltip */
+  background-color: black; /* Background color of the tooltip */
+  color: #fff; /* Text color */
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 0; /* Padding */
+  position: absolute; /* Position it relative to the button */
+  z-index: 1; /* Make sure it appears above other elements */
+  opacity: 0; /* Start with an invisible tooltip */
+  transition: opacity 0.3s; /* Fade-in effect */
+}
+
+/* Specific positions for tooltips */
+.controller-button:nth-child(1) .tooltip { /* M button - above */
+  bottom: 125%; /* Position above the button */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center alignment */
+}
+
+.controller-button:nth-child(2) .tooltip { /* Yellow C button - contact */
+  left: 125%; /* Position to the left of the button */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center alignment */
+}
+
+.controller-button:nth-child(3) .tooltip { /* B button - below */
+  top: 125%; /* Position below the button */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center alignment */
+}
+
+.controller-button:nth-child(4) .tooltip { /* Green C button - work experience */
+  right: 125%; /* Position to the right of the button */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center alignment */
+}
+
+/* Show tooltip on hover */
+.controller-button:hover .tooltip {
+  visibility: visible; /* Show tooltip on hover */
+  opacity: 1; /* Make tooltip fully visible */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

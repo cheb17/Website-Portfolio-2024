@@ -1,0 +1,149 @@
+*{
+    background-color: #F5F0E3;
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    text-decoration: none;
+    outline: none;
+}
+h1{
+  background-color: white;
+}
+/* TITLE */
+.title{
+    font-family: "Plaster", system-ui;
+    font-size: 75px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.social{
+    align-items: center; /* Optional: Aligns the images vertically if they have different heights */
+    display: flex;
+    gap: 50px; /* Optional: Adds space between the images */
+    justify-content: center; /* Optional: Centers the images horizontally within the container */
+    margin-top: 3%;
+}
+
+.work-item {
+    text-align: center; /* Centers the text below each image */
+}
+
+.work-item img {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: contain; /* Ensures the entire image fits within the set dimensions */
+}
+
+.work-item p {
+    font-family: "Josefin Sans", serif;
+    margin-top: 10px; /* Space between the image and the text */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #333; /* Optional: Change text color */
+}
+
+/* -------------------- */
+/* CONTROLS */
+/* ------------------- */
+.button-controls {
+    font-family: "Josefin Sans", serif;
+    position: fixed; /* Keep the buttons fixed in the corner */
+    bottom: 50px; /* Space from the bottom */
+    right: 120px; /* Set space from the right */
+    width: 90px; /* Define a width for the button controls */
+    height: 90px;
+  }
+  
+  .controller-button {
+    width: 40px; /* Set width of the buttons */
+    height: 40px; /* Set height of the buttons */
+    border-radius: 50%; /* Keep circular shape */
+    display: flex; /* Flexbox to center text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: none; /* Remove shadow */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth transitions */
+  }
+  
+  /* Positioning for diamond shape */
+  .controller-button:nth-child(1) {
+    background-color: #36AE7C; /* Green */
+    position: absolute;
+    top: -10%; 
+    left: 50%; 
+    transform: translate(-50%, 0);
+  }
+  
+  .controller-button:nth-child(2) {
+    background-color: #F9D923; /* Yellow */
+    position: absolute;
+    top: 50%; 
+    right: -10%; 
+    transform: translate(0, -50%);
+  }
+  
+  .controller-button:nth-child(3) {
+    background-color: #F0134D; /* Red */
+    position: absolute;
+    bottom: -10%; 
+    left: 50%; 
+    transform: translate(-50%, 0);
+  }
+  
+  .controller-button:nth-child(4) {
+    background-color: #40BFC1; /* Blue */
+    position: absolute;
+    top: 50%; 
+    left: -10%; 
+    transform: translate(0, -50%);
+  }
+  
+  .tooltip {
+    visibility: hidden; /* Hide the tooltip by default */
+    width: 120px; /* Width of the tooltip */
+    background-color: black; /* Background color of the tooltip */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 0; /* Padding */
+    position: absolute; /* Position it relative to the button */
+    z-index: 1; /* Make sure it appears above other elements */
+    opacity: 0; /* Start with an invisible tooltip */
+    transition: opacity 0.3s; /* Fade-in effect */
+  }
+  
+  /* Specific positions for tooltips */
+  .controller-button:nth-child(1) .tooltip { /* M button - above */
+    bottom: 125%; /* Position above the button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment */
+  }
+  
+  .controller-button:nth-child(2) .tooltip { /* Yellow C button - contact */
+    left: 125%; /* Position to the left of the button */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center alignment */
+  }
+  
+  .controller-button:nth-child(3) .tooltip { /* B button - below */
+    top: 125%; /* Position below the button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment */
+  }
+  
+  .controller-button:nth-child(4) .tooltip { /* Green C button - work experience */
+    right: 125%; /* Position to the right of the button */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center alignment */
+  }
+  
+  /* Show tooltip on hover */
+  .controller-button:hover .tooltip {
+    visibility: visible; /* Show tooltip on hover */
+    opacity: 1; /* Make tooltip fully visible */
+  }
